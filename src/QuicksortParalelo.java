@@ -17,13 +17,13 @@ public class QuicksortParalelo extends Thread {
     private void quickSort(int[] v, int i, int fim) {
         if(this.fim > inicio) {
             //Chamada da rotina que ira dividir o vetor em 3 partes.
-            int indexPivo = dividir(this.getV(), this.inicio, this.fim);
+            int indexPivo = dividir(v, inicio, fim);
       /* Chamada recursiva para redivisao do vetor de elementos menores
         que o pivô. */
-            quickSort(this.v, this.inicio, indexPivo - 1);
+            quickSort(v, this.inicio, indexPivo - 1);
       /* Chamada recursiva para redivisao do vetor de elementos maiores
         que o pivô. */
-            quickSort(this.v, indexPivo + 1, this.fim);
+            quickSort(v, indexPivo + 1, fim);
         }
     }
 
